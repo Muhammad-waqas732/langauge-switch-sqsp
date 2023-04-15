@@ -26,18 +26,22 @@ $(function() {
   /* HOMEPAGE-LOGO LINKS TO PROPER LANGUAGE HOMEPAGE */
   if (lang == "en") {
     $('a[href="/"]').attr("href", "/en/home/");
+    $('section[data-section-id="62e987fb82d80f6a17758622"], section[data-section-id="64386ccb98404827de512339"], section[data-section-id="64386ccdda6955528ae63b0e"]').remove();
      $('.header-nav-item--folder:not(".multilanguage") .header-nav-folder-title, .header-menu-nav-item:not(".multilanguage") span:not(".visually-hidden, .chevron")').text('English');
   }
   if (lang == "de") {
     $('a[href="/"]').attr("href", "/de/home/");
+    $('section[data-section-id="64386ccb98404827de512339"], section[data-section-id="64386ccdda6955528ae63b0e"], section[data-section-id="64386cd085c3ce20f00f8259"]').remove();
     $('.header-nav-item--folder:not(".multilanguage") .header-nav-folder-title, .header-menu-nav-item:not(".multilanguage") span:not(".visually-hidden, .chevron")').text('Deutsch');
   }
   if (lang == "it") {
     $('a[href="/"]').attr("href", "/it/home/");
+    $('section[data-section-id="62e987fb82d80f6a17758622"], section[data-section-id="64386ccb98404827de512339"], section[data-section-id="64386cd085c3ce20f00f8259"]').remove();
     $('.header-nav-item--folder:not(".multilanguage") .header-nav-folder-title, .header-menu-nav-item:not(".multilanguage") span:not(".visually-hidden, .chevron")').text('Italiano');
   }
   if (lang == "fr") {
     $('a[href="/"]').attr("href", "/fr/home/");
+    $('section[data-section-id="62e987fb82d80f6a17758622"], section[data-section-id="64386ccdda6955528ae63b0e"], section[data-section-id="64386cd085c3ce20f00f8259"]').remove();
     $('.header-nav-item--folder:not(".multilanguage") .header-nav-folder-title, .header-menu-nav-item:not(".multilanguage") span:not(".visually-hidden, .chevron")').text('Français');
   }
   /* Language Switch Link*/
