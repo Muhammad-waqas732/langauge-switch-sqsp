@@ -31,16 +31,19 @@ $(function() {
   }
   if (lang == "de") {
     $('a[href="/"]').attr("href", "/de/home/");
+    $('.header-actions-action--cta a').text('Interaktive Karte');
     $('section[data-section-id="64386ccb98404827de512339"], section[data-section-id="64386ccdda6955528ae63b0e"], section[data-section-id="64386cd085c3ce20f00f8259"]').remove();
     $('.header-nav-item--folder:not(".multilanguage") .header-nav-folder-title, .header-menu-nav-item:not(".multilanguage") span:not(".visually-hidden, .chevron")').text('Deutsch');
   }
   if (lang == "it") {
     $('a[href="/"]').attr("href", "/it/home/");
+    $('.header-actions-action--cta a').text('Mappa interattiva');
     $('section[data-section-id="62e987fb82d80f6a17758622"], section[data-section-id="64386ccb98404827de512339"], section[data-section-id="64386cd085c3ce20f00f8259"]').remove();
     $('.header-nav-item--folder:not(".multilanguage") .header-nav-folder-title, .header-menu-nav-item:not(".multilanguage") span:not(".visually-hidden, .chevron")').text('Italiano');
   }
   if (lang == "fr") {
     $('a[href="/"]').attr("href", "/fr/home/");
+    $('.header-actions-action--cta a').text('Mappa interattiva');
     $('section[data-section-id="62e987fb82d80f6a17758622"], section[data-section-id="64386ccdda6955528ae63b0e"], section[data-section-id="64386cd085c3ce20f00f8259"]').remove();
     $('.header-nav-item--folder:not(".multilanguage") .header-nav-folder-title, .header-menu-nav-item:not(".multilanguage") span:not(".visually-hidden, .chevron")').text('Français');
   }
@@ -51,24 +54,24 @@ $(function() {
   console.log(lanSwt);
   if (lanLink != "/") {
   lanLink = lanLink.replace(/^.{4}/g, '');
- $(`.header-nav-item--folder:not(".multilanguage") .header-nav-folder-item a`).eq(0).attr('href', `/en/` + lanLink);
+ $(`.header-nav-item--folder:not(".multilanguage") .header-nav-folder-item a`).eq(0).attr('href', `/de/` + lanLink);
   $(`.header-nav-item--folder:not(".multilanguage") .header-nav-folder-item a`).eq(1).attr('href', `/fr/` + lanLink);
-  $(`.header-nav-item--folder:not(".multilanguage") .header-nav-folder-item a`).eq(2).attr('href', `/de/` + lanLink);
-  $(`.header-nav-item--folder:not(".multilanguage") .header-nav-folder-item a`).eq(3).attr('href', `/it/` + lanLink);
- $(lanSwt).find(`.header-menu-nav-item:not(".header-menu-controls") a`).eq(0).attr('href', `/en/` + lanLink);
+  $(`.header-nav-item--folder:not(".multilanguage") .header-nav-folder-item a`).eq(2).attr('href', `/it/` + lanLink);
+  $(`.header-nav-item--folder:not(".multilanguage") .header-nav-folder-item a`).eq(3).attr('href', `/en/` + lanLink);
+ $(lanSwt).find(`.header-menu-nav-item:not(".header-menu-controls") a`).eq(0).attr('href', `/de/` + lanLink);
  $(lanSwt).find(`.header-menu-nav-item:not(".header-menu-controls") a`).eq(1).attr('href', `/fr/` + lanLink);
-  $(lanSwt).find(`.header-menu-nav-item:not(".header-menu-controls") a`).eq(2).attr('href', `/de/` + lanLink);
-  $(lanSwt).find(`.header-menu-nav-item:not(".header-menu-controls") a`).eq(3).attr('href', `/it/` + lanLink);
+  $(lanSwt).find(`.header-menu-nav-item:not(".header-menu-controls") a`).eq(2).attr('href', `/it/` + lanLink);
+  $(lanSwt).find(`.header-menu-nav-item:not(".header-menu-controls") a`).eq(3).attr('href', `/en/` + lanLink);
   }
   if (lanLink == "/") {
-  $(`.header-nav-item--folder:not(".multilanguage") .header-nav-folder-item a`).eq(0).attr('href', `/en/home`);
+  $(`.header-nav-item--folder:not(".multilanguage") .header-nav-folder-item a`).eq(0).attr('href', `/de/home`);
   $(`.header-nav-item--folder:not(".multilanguage") .header-nav-folder-item a`).eq(1).attr('href', `/fr/home`);
-  $(`.header-nav-item--folder:not(".multilanguage") .header-nav-folder-item a`).eq(2).attr('href', `/de/home`);
-  $(`.header-nav-item--folder:not(".multilanguage") .header-nav-folder-item a`).eq(3).attr('href', `/it/home`);
- $(lanSwt).find(`.header-menu-nav-item:not(".header-menu-controls") a`).eq(0).attr('href', `/en/home`);
+  $(`.header-nav-item--folder:not(".multilanguage") .header-nav-folder-item a`).eq(2).attr('href', `/it/home`);
+  $(`.header-nav-item--folder:not(".multilanguage") .header-nav-folder-item a`).eq(3).attr('href', `/en/home`);
+ $(lanSwt).find(`.header-menu-nav-item:not(".header-menu-controls") a`).eq(0).attr('href', `/de/home`);
  $(lanSwt).find(`.header-menu-nav-item:not(".header-menu-controls") a`).eq(1).attr('href', `/fr/home`);
-  $(lanSwt).find(`.header-menu-nav-item:not(".header-menu-controls") a`).eq(2).attr('href', `/de/home`);
-  $(lanSwt).find(`.header-menu-nav-item:not(".header-menu-controls") a`).eq(3).attr('href', `/it/home`);
+  $(lanSwt).find(`.header-menu-nav-item:not(".header-menu-controls") a`).eq(2).attr('href', `/it/home`);
+  $(lanSwt).find(`.header-menu-nav-item:not(".header-menu-controls") a`).eq(3).attr('href', `/en/home`);
   }
   /* ADD EXCLUSION NAV ITEMS */
   $('.exclude-me,.exclude-me a').addClass('exclude');
